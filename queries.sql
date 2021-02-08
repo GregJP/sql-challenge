@@ -60,4 +60,16 @@ on (e.emp_no=m.emp_no)
 join departments d
 on (m.dept_no=d.dept_no);
 
+-- Challenge 5
+select first_name, last_name, sex
+from employees
+where first_name = 'Hercules' and last_name like 'B%';
 
+-- Challenge 6
+select e.emp_no, e.last_name, e.first_name, d.dept_name
+from employees e
+join dept_emp p
+on (e.emp_no=p.emp_no)
+join departments d
+on (p.dept_no=d.dept_no)
+where dept_name = 'Sales'
