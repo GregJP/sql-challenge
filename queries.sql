@@ -72,4 +72,19 @@ join dept_emp p
 on (e.emp_no=p.emp_no)
 join departments d
 on (p.dept_no=d.dept_no)
-where dept_name = 'Sales'
+where dept_name = 'Sales';
+
+-- Challenge 7
+select e.emp_no, e.last_name, e.first_name, d.dept_name
+from employees e
+join dept_emp p
+on (e.emp_no=p.emp_no)
+join departments d
+on (p.dept_no=d.dept_no)
+where dept_name = 'Sales' or dept_name = 'Development';
+
+-- Challenge 8
+select last_name, count(last_name) as "Last Name Frequency"
+from employees
+group by last_name
+order by "Last Name Frequency" DESC;
