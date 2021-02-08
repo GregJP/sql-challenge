@@ -23,10 +23,10 @@ create table dept_emp (
 	foreign key (dept_no) references departments(dept_no));
 	
 create table dept_manager (
-	emp_no int,
 	dept_no varchar,
-	foreign key (emp_no) references employees(emp_no),
-	foreign key (dept_no) references departments(dept_no));
+	emp_no int,
+	foreign key (dept_no) references departments(dept_no),
+	foreign key (emp_no) references employees(emp_no));
 	
 create table salaries (
 	emp_no int,
