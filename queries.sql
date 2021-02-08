@@ -45,3 +45,19 @@ from employees
 where hire_date between '1986-01-01' and '1986-12-31';
 
 -- Challenge 3
+select m.dept_no, d.dept_name, m.emp_no, e.last_name, e.first_name
+from dept_manager m
+join departments d
+on (m.dept_no=d.dept_no)
+join employees e
+on (m.emp_no=e.emp_no);
+
+-- Challenge 4
+select e.emp_no, e.last_name, e.first_name, d.dept_name
+from employees e
+join dept_emp m
+on (e.emp_no=m.emp_no)
+join departments d
+on (m.dept_no=d.dept_no);
+
+
